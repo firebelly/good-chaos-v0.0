@@ -20,16 +20,21 @@ html {
 }
 
 body {
-	$max: map-get($breakpoints,'xl');
-	min-height: -webkit-fill-available;
+	min-height: 100dvh;
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
 	background: var(--color-primary);
 	color: var(--color-secondary);
 	font-family: var(--ff-messina-serif);
 	font-weight: 400;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	-webkit-overflow-scrolling: touch;	
+	-webkit-overflow-scrolling: touch;
+
+	> main {
+		flex: 1 1 0%;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,6 +51,10 @@ p {
 	margin: 0;
 }
 
+a {
+	color: inherit;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -60,36 +69,6 @@ img {
 .svg-defs {
 	&._is-hidden {
 		display: none;
-	}
-}
-
-/* ---------------------------------------------------------------------
-  Redactor Plugin Globals
------------------------------------------------------------------------- */
-[class$="--redactor"] {
-
-	p {
-		margin: 20px 0;
-	}
-
-	em {
-		font-style: italic;
-	}
-
-	b, strong {
-		font-weight: bold;
-	}
-
-	ul {
-		margin: 20px;
-		list-style: disc;
-	}
-
-	a:link,
-	a:visited,
-	a:hover,
-	a:active {
-		color: inherit;
 	}
 }
 
@@ -123,4 +102,86 @@ img {
 
 .skip-link:focus-within {
 	transform: translateY(0%);
+}
+
+
+/* ---------------------------------------------------------------------
+	Styles
+------------------------------------------------------------------------ */
+body {
+	font-family: var(--ff-swear-deck);
+	font-size: clamp(32px, 4vw, 80px);
+
+	> main,
+	> footer {
+		margin: 0 auto;
+		padding: 0 clamp(.625em, 5.25vw, 1em);
+		width: 100%;
+		max-width: 21.125em;
+	}
+}
+
+h1 {
+	margin: 55px 0 0.6733333333em 0;
+	// padding-bottom: 120px;
+	padding-bottom: .86em;
+	border-bottom: 1px solid;
+	font-size: 120px;
+	font-size: clamp(64px, 10vw, 150px);
+	font-weight: 500;
+	line-height: 0.8;
+	letter-spacing: -0.03em
+}
+
+.footer {
+	.footer__inner {
+		padding: 90px 0 120px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-top: 1px solid;
+
+		svg {
+			margin-bottom: 50px;
+			width: 74px;
+			height: 74px;
+		}
+	
+		a {
+			font-family: var(--ff-lazzer);
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 1.25;
+			letter-spacing: 0.25em;
+			text-transform: uppercase;
+			text-underline-offset: 11px;
+			transition: text-decoration-color .25s ease-out;
+
+			@media (hover: hover) {
+				&:hover {
+					text-decoration-color: transparent;
+					transition: text-decoration-color .25s ease-in;
+				}
+			}
+		}
+
+		@include breakpoint(md) {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+
+			svg {
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint(xl) {
+			display: block;
+			position: relative;
+
+			svg {
+				inset: auto auto 115px calc(50% - 37px);
+				position: absolute;
+			}
+		}
+	}
 }

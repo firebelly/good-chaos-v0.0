@@ -21,40 +21,34 @@ $breakpoints: (
  Fonts
  font url is relative to our compiled stylesheet
 ------------------------------------------------------------------------ */
-@mixin getFont($fontname, $filedirectory, $filename, $style, $weight) {
-	@font-face {
-		$downloadable-path: '../fonts/#{$filedirectory}/#{$filename}';
+// @mixin getFont($fontname, $filedirectory, $filename, $style, $weight) {
+// 	@font-face {
+// 		$downloadable-path: '../fonts/#{$filedirectory}/#{$filename}';
 
-		font-display: swap;
-		font-family: $fontname;
-		font-style: $style;
-		font-weight: $weight;
-		src: url('#{$downloadable-path}.woff2') format('woff2');
-	}
-}
+// 		font-display: swap;
+// 		font-family: $fontname;
+// 		font-style: $style;
+// 		font-weight: $weight;
+// 		src: url('#{$downloadable-path}.woff2') format('woff2');
+// 	}
+// }
 
-// Define project fonts
-// @include getFont('Axiforma', 'axiforma', 'axiforma--book', normal, 400);
-// @include getFont('Axiforma', 'axiforma', 'axiforma--medium', normal, 500);
+// // Define project fonts
+// @include getFont('Swear Deck', 'swear-deck', 'swear-deck-demo--medium-cilati', normal, 500);
+// @include getFont('Swear Deck', 'swear-deck', 'swear-deck-demo--bold-cilati', normal, 700);
 
-// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light', normal, 200);
-// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light-italic', italic, 200);
-// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular', normal, 400);
-// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular-italic', italic, 400);
+// @include getFont('Swear Text', 'swear-text', 'swear-text-demo--medium', normal, 500);
 
-// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
-// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
-// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular', normal, 400);
-// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular-italic', italic, 400);
+// @include getFont('Lazzer', 'lazzer-demo', 'lazzer-demo--medium', normal, 500);
 
 
 /* ---------------------------------------------------------------------
 	Font Family
 ------------------------------------------------------------------------ */
 :root {
-	--ff-axiforma: Axiforma, Verdana, sans-serif;
-	--ff-messina-modern: "Messina Modern", "Times New Roman", Times, serif;
-	--ff-messina-serif: "Messina Serif", "Times New Roman", Times, serif;
+	--ff-swear-deck: "Swear Deck", "Times New Roman", Times, serif;
+	--ff-swear-text: "Swear Text", "Times New Roman", Times, serif;
+	--ff-lazzer: "Lazzer", Verdana, sans-serif;
 }
 
 /* ---------------------------------------------------------------------
