@@ -109,24 +109,25 @@ img {
 	Styles
 ------------------------------------------------------------------------ */
 body {
-	font-family: var(--ff-swear-deck);
-	font-size: clamp(32px, 4vw, 80px);
+	font-family: var(--ff-lazzer);
+	font-size: clamp(24px,2.6vw,45px);
 
 	> main,
 	> footer {
 		margin: 0 auto;
-		padding: 0 clamp(.625em, 3vw, 1em);
+		padding: 0 clamp(.625em, 4.5vw, 1.7777777778em);
 		width: 100%;
-		max-width: 21.125em;
+		max-width: 37.5555555556em;
+	}
+
+	> main {
+		padding-top: 1.25em;
 	}
 }
 
 h1 {
-	margin: 55px 0 0.6733333333em 0;
-	padding-bottom: .86em;
-	border-bottom: 1px solid;
-	font-size: 120px;
-	font-size: clamp(64px, 10vw, 150px);
+	font-family: var(--ff-swear-deck);
+	font-size: clamp(2.6666666667em, 10vw, 3.3333333333em);
 	font-weight: 500;
 	line-height: 0.8;
 	letter-spacing: -0.03em
@@ -135,17 +136,15 @@ h1 {
 
 .intro,
 .outro {
-	margin-bottom: 4.25em;
+	margin-bottom: 4em;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	font-family: var(--ff-lazzer);
-	font-size: clamp(24px,4vw,45px);
 	font-weight: 400;
 	line-height: 1.25;
 
 	p {
-		margin-bottom: 1.33em;
+		margin-bottom: 1.2em;
 		max-width: 23em;
 
 		&:last-child {
@@ -154,19 +153,24 @@ h1 {
 	}
 }
 
+.intro {
+	margin-top: 2.85em;
+	padding-top: 2.22em;
+	border-top: 1px solid;
+}
+
 .outro {
+	margin-bottom: 2.6em;
+	padding-bottom: 6em;
+	border-bottom: 1px solid;
+
 	p {
 		text-align: right;
 
 		span {
 			display: block;
 
-			&:first-child {
-			}
-			&:last-child {
-			}
-
-			@include breakpoint(md) {
+			@include breakpoint(sm) {
 				br {
 					display: none;
 				}
@@ -177,14 +181,13 @@ h1 {
 
 .footer {
 	.footer__inner {
-		padding: 90px 0 120px 0;
+		padding: 0 0 2.75em 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border-top: 1px solid;
 
 		svg {
-			margin-bottom: 50px;
+			margin-bottom: 2.0833333333em;
 			width: 74px;
 			height: 74px;
 		}
@@ -221,7 +224,7 @@ h1 {
 			position: relative;
 
 			svg {
-				inset: auto auto 115px calc(50% - 37px);
+				inset: auto auto 2.5555555556em calc(50% - 37px);
 				position: absolute;
 			}
 		}
