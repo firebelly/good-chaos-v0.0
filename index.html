@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Good Chaos</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="./build/styles/main.css" rel="stylesheet">
+
+    <!--  Prevent Transition Flash  -->
+    <style id="holderStyle">
+      *, *::before, *::after { transition: none!important; }
+    </style>
+  </head>
+
+  <body>
+    <!--  Main  -->
+    <main>
+      <h1>We are<br> Good Chaos</h1>
+      <p>We are setting out as a new organization to celebrate our commitment to artists, caregivers, entrepreneurs, and farmed animals; starting in our backyard here in Chicago and working more broadly nationwide.</p>
+      <p>We believe in collective action, radical wonder, and joyful rebellion; and harness philanthropy, investing, and narrative change strategies to imagine new possibilities, make bold moves, and experiment with wild ideas.</p>
+      <p>Let’s dream bigger, together. Let’s make some Good Chaos.</p>
+
+      <h2>Our Story</h2>
+      <p>Born at <a href="https://www.buildersvision.com">Builders Vision</a>, Good Chaos is a new organization that celebrates our commitment to artists, animals, entrepreneurs, and caregivers. We work collaboratively to harness the shared power of philanthropy, investing, and narrative strategies across Chicago, the  Midwest—and beyond!</p>
+
+      <h2>Our Focus Areas</h2>
+      <ul>
+        <li>Artists & culture workers</li>
+        <li>Caregivers and others supporting families</li>
+        <li>Farmed animals and food systems</li>
+        <li>Entrepreneurs</li>
+      </ul>
+
+      <h2>Our Impact Tools</h2>
+      <ul>
+        <li>Philanthropy</li>
+        <li>Investing</li>
+        <li>Narrative Change</li>
+      </ul>
+    </main>
+
+    <footer>
+      <a href="">Join Our Mailing List</a>
+      <a href="">Media Inquiries</a>
+    </footer>
+
+    <!--  Prevent Transition Flash  -->
+    <script>
+      window.onload  = () => {
+        holderStyle.remove();
+      };
+    </script>
+    <!-- <script src="/build/scripts/main.js"></script> -->
+  </body>
+</html>

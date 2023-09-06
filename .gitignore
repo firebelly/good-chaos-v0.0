@@ -1,0 +1,13 @@
+/.env
+/.idea
+/vendor
+*.DS_Store
+.cache-loader
+node_modules
+npm-debug.log
+yarn-error.log
+*.map
+
+# Generated files
+/build
+/mix-manifest.json

@@ -1,0 +1,144 @@
+/* _config.scss */
+@use "sass:math";
+/* ---------------------------------------------------------------------
+ _config contains project-specific settings
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Breakpoints Map
+------------------------------------------------------------------------ */
+$breakpoints: (
+	"xxs": "0",
+	"xs": "23.5rem", // 376px
+	"sm": "36rem", // 576px
+	"md": "48rem", // 768px
+	"lg": "64rem", // 1024px
+	"xl": "80rem", // 1280px
+	"xxl": "90rem" // 1440px
+);
+
+/* ---------------------------------------------------------------------
+ Fonts
+ font url is relative to our compiled stylesheet
+------------------------------------------------------------------------ */
+@mixin getFont($fontname, $filedirectory, $filename, $style, $weight) {
+	@font-face {
+		$downloadable-path: '../fonts/#{$filedirectory}/#{$filename}';
+
+		font-display: swap;
+		font-family: $fontname;
+		font-style: $style;
+		font-weight: $weight;
+		src: url('#{$downloadable-path}.woff2') format('woff2');
+	}
+}
+
+// Define project fonts
+// @include getFont('Axiforma', 'axiforma', 'axiforma--book', normal, 400);
+// @include getFont('Axiforma', 'axiforma', 'axiforma--medium', normal, 500);
+
+// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light', normal, 200);
+// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light-italic', italic, 200);
+// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular', normal, 400);
+// @include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular-italic', italic, 400);
+
+// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
+// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
+// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular', normal, 400);
+// @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular-italic', italic, 400);
+
+
+/* ---------------------------------------------------------------------
+	Font Family
+------------------------------------------------------------------------ */
+:root {
+	--ff-axiforma: Axiforma, Verdana, sans-serif;
+	--ff-messina-modern: "Messina Modern", "Times New Roman", Times, serif;
+	--ff-messina-serif: "Messina Serif", "Times New Roman", Times, serif;
+}
+
+/* ---------------------------------------------------------------------
+	Type
+------------------------------------------------------------------------ */
+:root {
+	--type-60: 3.75rem;
+	--type-38: 2.375rem;
+	--type-28: 1.75rem;
+	--type-26: 1.625rem;
+	--type-22: 1.375rem;
+	--type-21: 1.3125rem;
+	--type-18: 1.125rem;
+	--type-15: 0.9375rem;
+	--type-14: 0.875rem;
+	--type-12: 0.75rem;
+
+	--line-height-extra-extra-tight: 1.0833333333;
+	--line-height-extra-tight: 1.1842105263;
+	--line-height-tight: 1.25;
+	--line-height-snug: 1.3636363636;
+	--line-height-base: 1.4285714286;
+	--line-height-loose: 1.6666666667;
+	
+	--letter-spacing-extra-tight: -0.01em;
+	--letter-spacing-tight: -0.005em;
+	--letter-spacing-narrow: 0.0025em;
+	--letter-spacing: 0.015em;
+	--letter-spacing-wide: 0.1005em;
+	--letter-spacing-extra-wide: 0.15em;
+}
+
+/* ---------------------------------------------------------------------
+	Colors
+------------------------------------------------------------------------ */
+:root {
+	--color-primary: #ffffff;
+	--color-secondary: #000000;
+}
+
+
+/* ---------------------------------------------------------------------
+	Space
+------------------------------------------------------------------------ */
+:root {
+	--base-24: 120px;
+	--base-20: 100px;
+	--base-10: 50px;
+	--base-8: 40px;
+	--base-4: 20px;
+	--base: 5px;
+}
+
+
+/* ---------------------------------------------------------------------
+	Misc
+------------------------------------------------------------------------ */
+:root {
+	--outline-width: 2px;
+	--outline-offset: 3px;
+
+	--transition: 250ms;
+	--transition-intermediate: 330ms;
+}
+
+
+/* ---------------------------------------------------------------------
+	Container
+------------------------------------------------------------------------ */
+@mixin container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: var(--base-4);
+	padding-left: var(--base-4);
+	width: 100%;
+	max-width: 81.25rem; // 1300px
+
+	@media (min-width: 36rem) {
+		padding-right: var(--base-5);
+		padding-left: var(--base-5);
+	}
+
+	@media (min-width: 64rem) {
+		padding-right: var(--base-10);
+		padding-left: var(--base-10);
+	}
+}

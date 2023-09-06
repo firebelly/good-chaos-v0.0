@@ -1,0 +1,62 @@
+/* _styleguide.scss */
+@use "config" as *;
+@use "sass:math";
+@use "sass:string";
+@use "sass:list";
+
+/* ---------------------------------------------------------------------
+ _styleguide contains project-specific style patterns
+------------------------------------------------------------------------ */
+// svg path, relative to compiled stylesheet
+$svg-path: '../svgs/';
+
+/* ---------------------------------------------------------------------
+ Type Map
+
+ 1. ems based on 1rem-sized parent
+ 2. relative line-heights
+------------------------------------------------------------------------ */
+$text-map: (	
+	// // Headlines
+	// "h2-axiforma": (
+	// 	font-family: var(--ff-axiforma),
+	// 	font-size: var(--type-60),
+	// 	font-weight: 400,
+	// 	line-height: var(--line-height-extra-extra-tight),
+	// 	letter-spacing: var(--letter-spacing-extra-tight),
+	// ),
+
+	// // Subhead
+	// "subhead": (
+	// 	font-family: var(--ff-messina-modern),
+	// 	font-size: var(--type-26),
+	// 	font-weight: 200,
+	// 	letter-spacing: var(--letter-spacing-extra-tight),
+	// 	line-height: var(--line-height-snug),
+	// ),
+
+	// // Body
+	// "body": (
+	// 	font-family: var(--ff-messina-serif),
+	// 	font-size: var(--type-21),
+	// 	font-weight: 300,
+	// 	line-height: var(--line-height-base),
+	// 	letter-spacing: var(--letter-spacing-tight)
+	// ),
+);
+
+
+/* ---------------------------------------------------------------------
+ Type Map
+
+ Example Usage:
+ getType('h2-lg');
+------------------------------------------------------------------------ */
+@mixin getType($name) {
+	$type-attrs: map-get($text-map, $name);
+
+	// Explode the attr-props
+	@each $attr, $prop in $type-attrs {
+		#{$attr}: $prop;
+	}
+}
