@@ -32,7 +32,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 
-	> main {
+	.main {
 		flex: 1 1 0%;
 	}
 }
@@ -183,20 +183,21 @@ h1 {
 
 
 .gradient-element {
+	display: flex;
+	flex-direction: column;
 	inset: 0;
 	position: absolute;
 	pointer-events: none;
 	background-clip: text;
 	-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		// background-size: 1108px 422px;
-		background-size: 2500px 2500px;
-		background-position: var(--x) var(--y);
-		background-repeat: no-repeat;
+	-webkit-text-fill-color: transparent;
+	background-size: 2500px 2500px;
+	background-position: var(--x) var(--y);
+	background-repeat: no-repeat;
 
-		.footer {
-			a {
-				text-decoration: none;
-			}
+	.footer {
+		a {
+			text-decoration: none;
 		}
+	}
 }
