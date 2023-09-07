@@ -26,9 +26,10 @@ if (!mix.inProduction()) {
         .setPublicPath('build/')
 
         .copy('src/fonts','build/fonts')
+        .copy('src/images','build/images')
 
         // bundles js: (from, to)
-        // .js('src/scripts/index.js', 'build/assets')
+        .js('src/scripts/main.js', 'build/scripts')
 
         // compiles sass and add css3 prefixes: (from, to)
         .sass('src/styles/main.scss', 'build/styles')
@@ -37,16 +38,16 @@ if (!mix.inProduction()) {
         // .ejs('src/views', 'dist', contents, { rmWhitespace: true, partials: 'src/views/partials' })
 
         // serves assets and sync with browser sync
-        // .browserSync({ server: 'dist', proxy: null })
 } else {
     mix
         // sets public path for manifest file
         .setPublicPath('build/')
 
         .copy('src/fonts','build/fonts')
+        .copy('src/images','build/images')
 
         // bundles js: (from, to)
-        // .js('src/scripts/index.js', 'build/assets')
+        .js('src/scripts/main.js', 'build/scripts')
 
         // compiles sass and add css3 prefixes: (from, to)
         .sass('src/styles/main.scss', 'build/styles')
