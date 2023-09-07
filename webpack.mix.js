@@ -37,7 +37,7 @@ if (!mix.inProduction()) {
         // .ejs('src/views', 'dist', contents, { rmWhitespace: true, partials: 'src/views/partials' })
 
         // serves assets and sync with browser sync
-        .browserSync({ server: 'dist', proxy: null })
+        // .browserSync({ server: 'dist', proxy: null })
 } else {
     mix
         // sets public path for manifest file
