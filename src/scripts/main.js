@@ -1,12 +1,9 @@
-let gradientElement = document.querySelector(`.gradient-element`);
+let gradientElement = document.querySelector(`.gradient`);
 
 function trackCursor(distanceFromTop) {
   window.addEventListener('mousemove', (event) => {
     mousePos = { x: event.clientX, y: event.clientY };
   
-    // var mouseX = mousePos.x - 554;
-    // var mouseY = (mousePos.y - 211) + distanceFromTop;
-
     var mouseX = mousePos.x - 1250;
     var mouseY = (mousePos.y - 1250) + distanceFromTop;
   
