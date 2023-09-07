@@ -20,10 +20,6 @@ html {
 }
 
 body {
-	min-height: 100dvh;
-	overflow-x: hidden;
-	display: flex;
-	flex-direction: column;
 	background: var(--color-primary);
 	color: var(--color-secondary);
 	font-family: var(--ff-messina-serif);
@@ -31,10 +27,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
-
-	.main {
-		flex: 1 1 0%;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,19 +51,25 @@ a {
 /* ---------------------------------------------------------------------
 	Styles
 ------------------------------------------------------------------------ */
-body {
+.wrapper {
+	min-height: 100dvh;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 	font-family: var(--ff-lazzer);
 	font-size: clamp(20px,2.6vw,36px);
+	padding-top: 1.25em;
+
+	.main {
+		flex: 1 1 0%;
+	}
 
 	.main,
 	.footer {
 		margin: 0 auto;
 		padding: 0 clamp(.625em, 4.5vw, 1.7777777778em);
 		width: 100%;
-	}
-
-	.main {
-		padding-top: 1.25em;
 	}
 }
 
@@ -182,11 +180,13 @@ h1 {
 
 
 
-.gradient-element {
+.gradient {
+	padding-top: 1.25em;
 	display: none;
 	inset: 0;
 	position: absolute;
 	pointer-events: none;
+	overflow-y: scroll;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
