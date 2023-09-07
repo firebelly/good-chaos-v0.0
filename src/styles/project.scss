@@ -192,7 +192,13 @@ h1 {
 	background-clip: text;
 	-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 500px 500px;
+		background-size: 1108px 422px;
 		background-position: var(--x) var(--y);
 		background-repeat: no-repeat;
+
+		.footer {
+			a {
+				text-decoration: none;
+			}
+		}
 }
