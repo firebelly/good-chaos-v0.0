@@ -58,7 +58,7 @@
       <!--<a href="">Media Inquiries</a>-->
     </footer>
 
-    <div class="gradient-element" aria-hidden>
+    <div class="gradient-element" style="--x: 10000px; --y: -10000px;" aria-hidden>
       <main class="main">
         <h1>We are<br> Good Chaos</h1>
         <div class="intro">
@@ -84,20 +84,6 @@
       </footer>
     </div>
 
-    <script>
-      let gradientElement = document.querySelector(`.gradient-element`);
-
-      window.addEventListener('mousemove', (event) => {
-        mousePos = { x: event.clientX, y: event.clientY };
-        console.log(`${mousePos.x}, ${mousePos.y}`);
-
-        var mouseX = mousePos.x - 250;
-        var mouseY = mousePos.y - 250;
-
-        gradientElement.style.setProperty('--x',mouseX + "px");
-        gradientElement.style.setProperty('--y',mouseY + "px");
-      });
-    </script>
-    <!-- <script src="/build/scripts/main.js"></script> -->
+    <script src="/build/scripts/main.js"></script>
   </body>
 </html>
