@@ -26,6 +26,7 @@ if (!mix.inProduction()) {
         .setPublicPath('build/')
 
         .copy('src/fonts','build/fonts')
+        .copy('src/images','build/images')
 
         // bundles js: (from, to)
         .js('src/scripts/main.js', 'build/scripts')
@@ -43,6 +44,7 @@ if (!mix.inProduction()) {
         .setPublicPath('build/')
 
         .copy('src/fonts','build/fonts')
+        .copy('src/images','build/images')
 
         // bundles js: (from, to)
         .js('src/scripts/main.js', 'build/scripts')
