@@ -7,8 +7,8 @@ function trackCursor(distanceFromTop) {
     // var mouseX = mousePos.x - 554;
     // var mouseY = (mousePos.y - 211) + distanceFromTop;
 
-    var mouseX = mousePos.x - 500;
-    var mouseY = (mousePos.y - 500) + distanceFromTop;
+    var mouseX = mousePos.x - 1000;
+    var mouseY = (mousePos.y - 1000) + distanceFromTop;
   
     gradientElement.style.setProperty('--x',mouseX + "px");
     gradientElement.style.setProperty('--y',mouseY + "px");
