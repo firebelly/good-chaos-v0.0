@@ -10,7 +10,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <link href="./build/styles/main.css" rel="stylesheet">
     <style>
+      .gradient-element {
+        background-image: url('./build/images/circle.svg');
+      }
+      
       @font-face {
         font-display: swap;
         font-family: "Swear Deck";
@@ -20,53 +25,15 @@
       }
       @font-face {
         font-display: swap;
-        font-family: "Swear Deck";
-        font-style: normal;
-        font-weight: 700;
-        src: url("./build/fonts/swear-deck/swear-deck-demo--bold-cilati.woff2") format("woff2");
-      }
-      @font-face {
-        font-display: swap;
-        font-family: "Swear Text";
-        font-style: normal;
-        font-weight: 500;
-        src: url("./build/fonts/swear-text/swear-text-demo--medium.woff2") format("woff2");
-      }
-      @font-face {
-        font-display: swap;
         font-family: Lazzer;
         font-style: normal;
         font-weight: 400;
         src: url("./build/fonts/lazzer/lazzer-demo--regular.woff2") format("woff2");
       }
     </style>
-    <link href="./build/styles/main.css" rel="stylesheet">
-
-    <!--  Prevent Transition Flash  -->
-    <style id="holderStyle">
-      *, *::before, *::after { transition: none!important; }
-    </style>
   </head>
 
-  <body>
-
-
-    <div class="mouse-cursor-gradient-tracking">
-      <span class="mouse-cursor-gradient-trackinggg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate, illo porro nulla nesciunt, id nam facere distinctio consequuntur nisi voluptatem ipsum optio quas placeat eligendi. Rerum aliquid fugiat ullam?</span>
-      <span class="gradient-element">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate, illo porro nulla nesciunt, id nam facere distinctio consequuntur nisi voluptatem ipsum optio quas placeat eligendi. Rerum aliquid fugiat ullam?</span>
-    </div>
-
-    <style>
-      .mouse-cursor-gradient-tracking span:last-child {
-        background-image: url('./build/images/circle.svg');
-      }
-
-      .gradient-element-clean {
-        background-image: url('./build/images/circle.svg');
-      }
-    </style>
-  
-    <div class="wrapper tracking-element-clean">
+  <body class="tracking-element-clean">
     <main class="main">
       <h1>We are<br> Good Chaos</h1>
       <div class="intro">
@@ -90,9 +57,8 @@
       </div>
       <!--<a href="">Media Inquiries</a>-->
     </footer>
-  </div>
 
-    <div class="copy gradient-element-clean" aria-hidden>
+    <div class="gradient-element" aria-hidden>
       <main class="main">
         <h1>We are<br> Good Chaos</h1>
         <div class="intro">
@@ -118,30 +84,8 @@
       </footer>
     </div>
 
-    <!--  Prevent Transition Flash  -->
     <script>
-      window.onload  = () => {
-        holderStyle.remove();
-      };
-    </script>
-    <script>
-      let trackingElementClean = document.querySelector(`.tracking-element-clean`);
-      let gradientElementClean = document.querySelector(`.gradient-element-clean`);
-      console.log(gradientElementClean)
-
-      trackingElementClean.addEventListener('mousemove', e => {
-        let rect = e.target.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-//        var x = x - 200;
-  //      var y = y - 400;
-        //gradientElementClean.style.setProperty('--x', x + `px`);
-        //gradientElementClean.style.setProperty('--y', y + `px`);
-
-        //gradientElementClean.style.setProperty('--x',e.offsetX + "px");
-        //gradientElementClean.style.setProperty('--y',e.offsetY + "px");
-  //btn.style.backgroundPositionY = -e.offsetY + 80 + "px";
-      });
+      let gradientElement = document.querySelector(`.gradient-element`);
 
       window.addEventListener('mousemove', (event) => {
         mousePos = { x: event.clientX, y: event.clientY };
@@ -150,39 +94,8 @@
         var mouseX = mousePos.x - 250;
         var mouseY = mousePos.y - 250;
 
-        gradientElementClean.style.setProperty('--x',mouseX + "px");
-        gradientElementClean.style.setProperty('--y',mouseY + "px");
-      });
-
-
-
-
-      let trackingElement = document.querySelector('.mouse-cursor-gradient-tracking');
-      let btn = document.querySelector('.gradient-element');
-
-
-      trackingElement.addEventListener('mousemove', e => {
-        let rect = e.target.getBoundingClientRect();
-        //var x = e.clientX - rect.left;
-        //var y = e.clientY - rect.top;
-        //btn.style.setProperty('--x', x + 'px');
-        //btn.style.setProperty('--y', y + 'px');
-        //let rect = e.target.getBoundingClientRect();
-        //let x = e.clientX - rect.left;
-        //let y = e.clientY - rect.top;
-
-        //var x = x - 200;
-        //var y = y - 400;
-        //btn.style.setProperty('--x', x + `px`);
-        //btn.style.setProperty('--y', y + `px`);
-      //btn.style.setProperty('--x', `calc(${x}px - 200px)`);
-      //btn.style.setProperty('--y', `calc(${x}px + 200px)`);
-
-  //      btn.style.setProperty('--x', -e.offsetX + "px");
-//        btn.style.setProperty('--y', -e.offsetY + "px");
-
-        //btn.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
-  //btn.style.backgroundPositionY = -e.offsetY + 80 + "px";
+        gradientElement.style.setProperty('--x',mouseX + "px");
+        gradientElement.style.setProperty('--y',mouseY + "px");
       });
     </script>
     <!-- <script src="/build/scripts/main.js"></script> -->
